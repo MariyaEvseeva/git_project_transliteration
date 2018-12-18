@@ -16,12 +16,11 @@ class Say_Hello(QWidget):
         self.setGeometry(200, 100, 1000, 600) 
         self.setWindowTitle('World Of Words: home page') 
         # так будет называться наше окно
-        self.setStyleSheet("background-color: #EEE8AA; color: #006400; font-family: Times;")
-        # настройка цвета фона, шрифта
-        self.ad_area = QLabel(self) 
-        # первая метка со следующим содержанием:
-        self.ad_area.setText("Добро пожаловать в нашу программу World Of Words.\
-        \nВ чём же суть программы и для чего она разработана?")  
+        self.setStyleSheet("background-color: #EEE8AA; color: #000000; font-family: Times;")
+        # настройка цвет фона, шрифта
+        self.ad_area = QLabel(self)  # первая метка
+        self.ad_area.setText("Добро пожаловать в нашу программу World Of Words!")  
+        self.ad_area.setStyleSheet("background-color: #EEE8AA; color: #006400; font-family: Times;")
         self.ad_area.move(20, 20)
         # передвинем метку в то место, где она будет лучше смотреться
         font = QFont('Times', 18)
