@@ -105,7 +105,7 @@ class The_Main_Window(QWidget):
                 elif i != 'ь' and i != 'Ь' and i != 'ъ' and i != 'Ъ':
                     ans += i
             self.label.setText("{}".format(ans))
-            self.tranclit = ans
+            self.translit = ans
 
     def give_info(self):
         # В этом методе мы будем сравнивать оригинал и транлитерацию по некоторым параметрам
