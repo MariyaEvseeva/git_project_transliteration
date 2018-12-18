@@ -27,14 +27,7 @@ class Say_Hello(QWidget):
         # настройка размера и формата шрифта (при помощи подключённого модуля QFont 
         self.ad_area.setFont(font)   
         # и подключение параметров шрифта к тексту метки
-        
-        self.pixmap = QPixmap()
-        self.image = QLabel(self)
-        self.image.move(0, 0)
-        self.image.resize(0, 0)        
-        self.image.setPixmap(self.pixmap)
-        # определяем некую переменную image, которая будет хранить фоторафию
-        
+ 
         self.table = QLabel(self)
         # новая метка
         self.table.move(20, 60)
@@ -47,9 +40,16 @@ class Say_Hello(QWidget):
         font2 = QFont('Times', 14)
         self.table.setFont(font2)   
         # для новой метки свой шрифт
+ 
+        self.pixmap = QPixmap()
+        self.image = QLabel(self)
+        self.image.move(190, 200)
+        self.image.resize(620, 370)        
+        self.image.setPixmap(self.pixmap)
+        # определяем некую переменную image, которая будет хранить фоторафию
         
     def run(self):
-        self.pixmap.load('img.png')
+        self.pixmap.load('img.jpg')
         self.image.setPixmap(self.pixmap)
         # выгружаем фотографию
            
